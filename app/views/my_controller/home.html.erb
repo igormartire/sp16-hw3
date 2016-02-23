@@ -1,0 +1,39 @@
+<head>
+  <style>
+    li.finished {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<h1>Users</h1>
+<ul>
+  <% @users.each do |u| %>
+    <li> <%= u.username %> </li>
+    <ul>
+      <li> E-mail: <%= u.email %> </li>
+      <li> Age: <%= u.age %> </li>
+    </ul>
+  <% end %>
+</ul>
+
+<h1>Cats</h1>
+<ul>
+  <% @cats.each do |c| %>
+    <li> <%= c.name %> </li>
+  <% end %>
+</ul>
+
+<h1>Todos</h1>
+<h2>Unfinished</h2>
+<ul>
+  <% @unfinished_todos.each do |t| %>
+    <li> <%= t.tasks %> </li>
+  <% end %>
+</ul>
+<h2>Finished</h2>
+<ul>
+  <% @finished_todos.each do |t| %>
+    <li> <%= t.tasks %> </li>
+  <% end %>
+</ul>
